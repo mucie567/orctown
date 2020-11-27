@@ -79,37 +79,3 @@ body {
     }
   }
 }
-#container {
-  .bg-slide {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    .bg-slide-1 {
-      width: 100%;
-      height: 100%;
-      background: url('../images/main/bg-im-1.png') no-repeat center top;
-      background-size: 2000px 938px;
-    }
-    .bg-slide-2 {
-      width: 100%;
-      height: 100%;
-      background: url('../images/main/bg-im-2.png') no-repeat center top;
-      background-size: 2000px 938px;
-    }
-    .bg-slide-3 {
-      width: 100%;
-      height: 100%;
-      background: url('../images/main/bg-im-3.png') no-repeat center top;
-      background-size: 2000px 938px;
-    }
-    .bg-slide-4 {
-      width: 100%;
-      height: 100%;
-      background: url('../images/main/bg-im-4.png') no-repeat center top;
-      background-size: 2000px 938px;
-    }
-  }
-}
