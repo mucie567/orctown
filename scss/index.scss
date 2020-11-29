@@ -79,3 +79,51 @@ body {
     }
   }
 }
+#container {
+  width: 100%;
+  .pre-order-time-wrap {
+    display: none;
+  }
+  .bg-new {
+    margin: 0 auto;
+    max-width: $width-2;
+    height: auto;
+    margin-top: 70px;
+    *[class*='bg-slide-'] {
+      position: relative;
+    }
+    a {
+      position: absolute;
+      bottom: 10%;
+      right: 25%;
+      display: block;
+      width: 14.73684210526316%; //280px;;
+      height: 43.07692307692308%;
+      background-color: #000;
+      background-color: rgba(0, 0, 0, 0.5);
+      p {
+        color: #fff;
+        text-align: right;
+        padding: 10px 40px;
+      }
+      .ad-tit {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .ad-txt {
+        font-size: 16px;
+      }
+    }
+    button {
+      position: absolute;
+      bottom: 12.30769230769231%; //80px;
+      right: 27.10526315789474%; //515px;
+      text-align: center;
+      background-color: $fontColor-2;
+      width: 5.263157894736842%; //100px;
+      height: 6.153846153846154%; //40px;
+      border: none;
+      font-weight: bold;
+    }
+  }
+}
