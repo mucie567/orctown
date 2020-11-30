@@ -85,12 +85,15 @@ body {
     display: none;
   }
   .bg-new {
-    margin: 0 auto;
     max-width: $width-2;
+    margin: 0 auto;
     height: auto;
     margin-top: 70px;
     *[class*='bg-slide-'] {
       position: relative;
+    }
+    .slick-arrow {
+      display: none !important;
     }
     a {
       position: absolute;
@@ -101,29 +104,204 @@ body {
       height: 43.07692307692308%;
       background-color: #000;
       background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
       p {
         color: #fff;
         text-align: right;
-        padding: 10px 40px;
       }
       .ad-tit {
         font-size: 20px;
         font-weight: bold;
       }
       .ad-txt {
+        margin-top: 5px;
         font-size: 16px;
       }
     }
-    button {
+    .ad-btn-1 {
+      display: block;
       position: absolute;
-      bottom: 12.30769230769231%; //80px;
-      right: 27.10526315789474%; //515px;
+      bottom: 13.07692307692308%; //500px;
+      right: 26.31578947368421%; //85px;
       text-align: center;
       background-color: $fontColor-2;
-      width: 5.263157894736842%; //100px;
-      height: 6.153846153846154%; //40px;
+      width: 7.894736842105263%; //150px;
+      height: 5.263157894736842%; //100px;
       border: none;
       font-weight: bold;
+    }
+    @media (max-width: 1601px) {
+      a {
+        padding: 10px 10px;
+        .ad-tit {
+          font-size: 16px;
+        }
+        .ad-txt {
+          font-size: 14px;
+        }
+      }
+    }
+    @media (max-width: 1086px) {
+      a {
+        padding: 10px 10px;
+        .ad-txt {
+          display: none;
+        }
+      }
+      .ad-btn-1 {
+        width: 10% !important;
+        height: 8% !important;
+      }
+    }
+  }
+  .banner-ico {
+    max-width: $width-2;
+    margin: 0 auto;
+    padding: 20px 0;
+    > ul {
+      width: 100%;
+      overflow: hidden;
+      li {
+        float: left;
+        width: 50%;
+        text-align: center;
+        &:nth-child(2) {
+          border-left: 2px solid $boarderColor-1;
+        }
+        a {
+          display: inline-block;
+          width: 217px;
+          height: 217px;
+        }
+        h3 {
+          font-size: 18px;
+          font-weight: bold;
+          margin-top: 5px;
+        }
+        p {
+          margin-top: 5px;
+        }
+      }
+      .newbie {
+        a {
+          background: url('../images/main/for-newbie.png') no-repeat 0 0;
+          background-size: contain;
+        }
+      }
+      .release-message {
+        a {
+          background: url('../images/main/realease-message.png') no-repeat 0 0;
+          background-size: contain;
+        }
+      }
+    }
+  }
+  .news {
+    max-width: $width-2;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $boarderColor-1;
+      margin-bottom: 50px;
+    }
+    h2 {
+      font-size: 32px;
+      font-weight: bold;
+      padding: 10px 20px;
+    }
+    .new-content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .latest-news {
+        flex-basis: calc(100% - 300px);
+        min-width: calc(100% - 300px);
+        padding-right: 30px;
+        .news-notice {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          li {
+            h3 {
+              margin-top: 10px;
+              font-size: 22px;
+              font-weight: bold;
+              &::after {
+                display: block;
+                content: '';
+                width: 50px;
+                height: 2px;
+                background-color: $fontColor-2;
+                margin: 10px 0;
+              }
+            }
+            p {
+              margin-top: 10px;
+              color: #272727;
+            }
+          }
+          .frame-1 {
+            flex-basis: calc(100% - 320px);
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            padding-right: 10px;
+            h3 {
+              font-size: 32px;
+            }
+          }
+          .frame-2 {
+            margin-bottom: 20px;
+          }
+        }
+      }
+      .popular-news {
+        flex-basis: 300px;
+        max-width: 300px;
+        .must-read {
+          width: 100%;
+          li {
+            padding: 25px 0;
+            border-bottom: 1px solid $boarderColor-1;
+            a {
+              display: flex;
+              justify-content: space-between;
+              &::before {
+                display: inline-block;
+                content: '';
+                width: 26px;
+                height: 24px;
+                background: url('../images/main/icon-thumb--gold.png') no-repeat
+                  0 0;
+              }
+              p {
+                width: 250px;
+                font-size: 16px;
+                font-weight: bold;
+                display: inline;
+                line-height: 1.4;
+              }
+            }
+          }
+        }
+      }
+      .btn-more {
+        display: block;
+        text-align: center;
+        min-width: 335px;
+        margin: 20px auto;
+        border: 1px solid $fontColor-2;
+        padding: 14px 20px;
+        font-size: 15px;
+        min-height: 46px;
+      }
     }
   }
 }

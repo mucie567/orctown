@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,OAAO,AAAC,CACN,WAAW,CAAE,MAAM,CACnB,QAAQ,CAAE,MAAM,CAChB,aAAa,CAAE,QAAQ,CACxB",
+    "sources": [
+        "../scss/comon.scss",
+        "../scss/design.scss"
+    ],
+    "names": [],
+    "file": "comon.min.css"
+}

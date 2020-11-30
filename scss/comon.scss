@@ -1,0 +1,8 @@
+@charset "utf-8";
+@import 'design';
+
+.eclips {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
