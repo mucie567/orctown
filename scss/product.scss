@@ -1,3 +1,123 @@
 @charset "utf-8";
 @import url('../css/reset.css');
 @import 'design';
+body {
+  font: 14px/1.4 Arial, sans-serif;
+}
+#header-bg {
+  width: 100%;
+  .header {
+    max-width: $width-1;
+    height: 70px;
+    position: relative;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 40px;
+    color: #fff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    .logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    // .util-menu {
+    //   position: absolute;
+    //   top: 0;
+    //   right: 40px;
+    //   li {
+    //     float: left;
+    //     ~ li {
+    //       padding-left: 15px;
+    //     }
+    //   }
+    // }
+  }
+}
+#gnb {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  > li {
+    float: left;
+    position: relative;
+    &:nth-of-type(4) {
+      margin-left: 180px;
+    }
+    a {
+      display: block;
+      height: 70px;
+      line-height: 70px;
+      font-size: 15px;
+      font-weight: bold;
+      color: $fontColor-1;
+    }
+    > ul {
+      display: none;
+      position: absolute;
+      width: 900px;
+      background: #000;
+      top: 70px;
+      left: 0;
+      li {
+        float: left;
+        a {
+          font-size: 16px;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}
+#container {
+  width: 100%;
+  margin-top: 150px;
+  .warhammer40k-pr {
+    max-width: $width-1;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    .product-category {
+      width: 30%;
+      margin-right: 20px;
+      > li {
+        position: relative;
+        width: 100%;
+        border-top: 1px solid #eee;
+        background-color: lightgray;
+        font-size: 21px;
+        padding: 12px 12px 12px 50px;
+        &::before {
+          position: absolute;
+          top: 16px;
+          left: 21px;
+          content: '';
+          display: block;
+          width: 3px;
+          height: 21px;
+          background-color: #555;
+        }
+        &::after {
+          position: absolute;
+          top: 16px;
+          left: 21px;
+          content: '';
+          display: block;
+          width: 3px;
+          height: 21px;
+          background-color: #555;
+          transform: rotate(90deg);
+        }
+      }
+    }
+    .product {
+      width: 60%;
+    }
+  }
+}
